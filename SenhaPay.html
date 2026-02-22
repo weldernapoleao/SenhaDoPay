@@ -1,0 +1,49 @@
+
+<HTMl:5>
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style/style.css"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache" />
+    
+   
+    <title>Gerador de senha Webposto Pay</title>
+</head>
+
+<body>
+    <h1>Gerador de senha Webposto Pay</h1>
+    
+    
+    <div class="card-body">
+        <textarea id="textArea" hidden > </textarea>
+        <a type="button" class="btn btn-primary btn-lg" onclick="copyToClipBoard()" id="btn1" > 
+            <script> 
+            
+            var ndata = new Date
+            var dia = ndata.getDate();
+            var mes = ndata.getMonth()+1;
+            var ano = ndata.getFullYear();
+            var hora = ndata.getHours();
+            var senha = ano-mes-dia-hora
+
+ document.getElementById("textArea").innerHTML = senha
+ document.getElementById("btn1").innerHTML = senha
+
+function copyToClipBoard() {
+    navigator.clipboard.writeText(senha);
+    alert("Copiado com sucesso!"); 
+    }
+            
+            
+            </script>
+        
+        </a>    
+    </div>
+        
+    
+</body>
+</html>
+</HTMl:5>
